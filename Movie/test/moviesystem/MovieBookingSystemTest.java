@@ -1,3 +1,5 @@
+package moviesystem;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -41,7 +43,8 @@ class MovieBookingSystemTest {
     void testCancelMoreThanBooked() {
         mbs.bookTicket("1:00 PM", 2);
         String result = mbs.cancelReservation("1:00 PM", 5);
-        assertEquals("Invalid operation (Attempt to cancel more tickets than booked).", result);
+        assertEquals("Invalid operation (Attempt to cancel more "
+            + "tickets than booked).", result);
     }
 
     @Test
