@@ -60,3 +60,26 @@ class MovieBookingSystem extends BookingSystem {
         return "Invalid operation (Attempt to cancel more tickets than booked).";
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        MovieBookingSystem mbs = new MovieBookingSystem();
+        mbs.addShow("10:00 AM", 50);
+        mbs.addShow("1:00 PM", 20);
+
+        // Test Case 1
+        System.out.println(mbs.bookTicket("10:00 AM", 5));
+
+        // Test Case 2
+        System.out.println(mbs.bookTicket("10:00 AM", 100));
+
+        // Test Case 3
+        System.out.println(mbs.cancelReservation("10:00 AM", 3));
+
+        // Test Case 4
+        System.out.println(mbs.bookTicket("1:00 PM", 2));
+
+        // Test Case 5
+        System.out.println(mbs.cancelReservation("1:00 PM", 5));
+    }
+}
