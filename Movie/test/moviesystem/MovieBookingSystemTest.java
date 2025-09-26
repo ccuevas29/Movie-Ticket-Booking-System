@@ -12,8 +12,6 @@ class MovieBookingSystemTest {
       */
     private MovieBookingSystem mbs;
 
-    // Constants to avoid magic numbers
-
     /** Show time at 10:00 AM. */
     private static final String SHOW_10_AM = "10:00 AM";
 
@@ -101,7 +99,6 @@ class MovieBookingSystemTest {
 
     @Test
     void testMainMethodRunsWithoutErrors() {
-        // Covers the main() method execution
         assertDoesNotThrow(() -> MovieBookingSystem.main(new String[]{}));
     }
 }
